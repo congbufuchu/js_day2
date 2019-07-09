@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            btn.onclick=function(){
+                var shu = document.getElementById("shu").value;
+                if(shu>90){
+                    alert('90分')
+                }else if(shu>80){
+                    alert('80分')
+                }else if(shu>70){
+                    alert('70分')
+                }else{
+                    alert('不及格')
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="shu">
+    <input type="button" id="btn">
+</body>
+</html>

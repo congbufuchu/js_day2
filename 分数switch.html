@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            btn.onclick=function(){
+                var shu = document.getElementById("shu").value;
+                var zui=parseInt(shu/10)
+                switch(zui){
+                    case 10 :
+                        alert('100分')
+                        break;
+                    case 9 :
+                        alert('90分')
+                        break;
+                    case 8 :
+                        shu>80
+                        alert('80分')
+                        break;
+                    default:
+                        shu<60
+                        alert('你不及格')
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="shu">
+    <input type="button" id="btn">
+</body>
+</html>

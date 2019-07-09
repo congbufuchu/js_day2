@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            btn.onclick=function(){
+                var height = document.getElementById("height").value;
+                var weight = document.getElementById("weight").value;
+                // var shu = document.getElementById("shu").value;
+                height=parseFloat(height);
+                weight=parseFloat(weight);
+                var shu = (height-100)*2;
+                if (weight <= shu + 10 && weight >= shu - 10){
+                    alert("标准");
+                }else{
+                    alert("超标");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="height">
+    <input type="text" id="weight">
+    <!-- <input type="text" id="shu"> -->
+    <input type="button" id="btn">
+</body>
+</html>

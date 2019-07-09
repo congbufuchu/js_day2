@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            btn.onclick=function(){
+                var year = document.getElementById("year").value;
+                var month = document.getElementById("month").value;
+                var day = document.getElementById("day").value;
+                year=parseInt(year);
+                month=parseInt(month);
+                day=parseInt(day);
+                var arr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+                var res = day
+                var i = 0
+                // while (i < month - 1) {
+                //     res += arr[i]
+                //     i++
+                // }
+
+                // if (month > 2) {
+                //     // 平年没事
+                //     // 闰年 +1
+                // }
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+                    while (i < month - 1) {
+                    res += arr[i]
+                    i++
+                    }
+                    if(month>2){
+                        document.getElementById("tian").value = res+1;
+                    }else{
+                        document.getElementById("tian").value = res
+                    }
+                }else{
+                    while (i < month - 1) {
+                    res += arr[i]
+                    i++
+                    }document.getElementById("tian").value = res;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="year">
+    <input type="text" id="month">
+    <input type="text" id="day">
+    <input type="button" id="btn">
+    <input type="text" id="tian">
+</body>
+</html>
